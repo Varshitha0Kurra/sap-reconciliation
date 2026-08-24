@@ -1,7 +1,7 @@
 import re
 from typing import Dict, List, Set, Tuple, Any
 from query_planner import QueryPlan, FilterCondition, JoinCondition, Aggregation, CalculatedField
-from .database import get_schema_metadata
+from database import get_schema_metadata
 
 ALLOWED_TABLES = {"PO_HEADER", "PO_ITEM", "GOODS_RECEIPT", "INVOICE_RECEIPT"}
 ALLOWED_OPERATORS = {"=", "!=", "<", "<=", ">", ">=", "LIKE", "IS NULL", "IS NOT NULL", "IN"}
