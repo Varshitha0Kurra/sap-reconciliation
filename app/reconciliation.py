@@ -2,11 +2,11 @@ import sqlite3
 import pandas as pd
 import logging
 from typing import Dict, Any, List, Tuple, Optional
-from app.database import get_connection
-from app.query_planner import generate_query_plan, QueryPlan
-from app.query_validator import validate_query_plan
-from app.sql_builder import build_sql_query
-from app.gemini_client import generate_text_response, is_gemini_configured
+from database import get_connection
+from query_planner import generate_query_plan, QueryPlan
+from query_validator import validate_query_plan
+from sql_builder import build_sql_query
+from gemini_client import generate_text_response, is_gemini_configured
 
 logger = logging.getLogger(__name__)
 
