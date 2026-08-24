@@ -4,10 +4,10 @@ import os
 from dotenv import load_dotenv
 
 # Ensure database is initialized before importing other app modules
-from app.database import init_db, get_database_stats, clear_database, get_schema_metadata, get_connection
+from database import init_db, get_database_stats, clear_database, get_schema_metadata, get_connection
 init_db()
 
-from app.ingestion import (
+from ingestion import (
     load_file_preview, 
     read_full_file,
     validate_po_data, 
@@ -18,10 +18,10 @@ from app.ingestion import (
     OPTIONAL_PO_FIELDS,
     REQUIRED_RECEIPT_FIELDS
 )
-from app.schema_mapper import propose_schema_mapping
-from app.conversation import ConversationManager
-from app.reconciliation import run_reconciliation_flow
-from app.gemini_client import is_gemini_configured
+from schema_mapper import propose_schema_mapping
+from conversation import ConversationManager
+from reconciliation import run_reconciliation_flow
+from gemini_client import is_gemini_configured
 
 # 1. Page Configuration
 st.set_page_config(
@@ -955,3 +955,4 @@ with col_chat:
                     st.markdown('</div>', unsafe_allow_html=True)
             else:
                 st.info("I couldn't find any records matching those conditions in the database.")
+                
