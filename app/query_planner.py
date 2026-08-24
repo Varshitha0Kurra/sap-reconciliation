@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field, model_validator
 from typing import List, Optional, Any
 
-from app.gemini_client import (
+from gemini_client import (
     generate_structured_output,
     is_gemini_configured
 )
