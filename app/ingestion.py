@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 from typing import Tuple, List, Dict, Any, Optional
-from app.database import get_connection
+from database import get_connection
 
 REQUIRED_PO_FIELDS = {
     "po_number": "PO Number",
