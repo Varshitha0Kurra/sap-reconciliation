@@ -6,7 +6,7 @@ from gemini_client import (
     is_gemini_configured
 )
 
-from app.database import get_schema_metadata
+from database import get_schema_metadata
 
 
 class FilterCondition(BaseModel):

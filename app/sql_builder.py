@@ -1,5 +1,5 @@
 from typing import List, Tuple, Any, Dict
-from app.query_planner import QueryPlan, FilterCondition, JoinCondition, Aggregation, CalculatedField
+from query_planner import QueryPlan, FilterCondition, JoinCondition, Aggregation, CalculatedField
 
 def build_sql_query(plan: QueryPlan) -> Tuple[str, List[Any]]:
     """
