@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import Dict, List, Optional
-from app.gemini_client import generate_structured_output, is_gemini_configured
-from app.ingestion import REQUIRED_PO_FIELDS, OPTIONAL_PO_FIELDS, REQUIRED_RECEIPT_FIELDS
+from gemini_client import generate_structured_output, is_gemini_configured
+from ingestion import REQUIRED_PO_FIELDS, OPTIONAL_PO_FIELDS, REQUIRED_RECEIPT_FIELDS
 
 class SchemaMappingResponse(BaseModel):
     mapping: Dict[str, str] = Field(
